@@ -9,3 +9,9 @@ oc new-project bouvier
 oc apply -k patty.bouvier
 oc apply -k selma.bouvier
 ```
+
+## Destroy
+```bash
+oc delete project simpson
+oc delete project bouvier
+```
