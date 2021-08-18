@@ -10,3 +10,15 @@ tcpchecks:
   - name: patty.bouvier
     host: patty-service.bouvier
     port: 8080
+  - name: external-VFziggo
+    host: www.vodafoneziggo.com
+    port: 80
+  - name: external-RH
+    host: www.redhat.com
+    port: 80
+  - name: external-ibm
+    host: www.ibm.com
+    port: 80
+  - name: LAN-webhost
+    host: 192.168.178
+    port: 80
