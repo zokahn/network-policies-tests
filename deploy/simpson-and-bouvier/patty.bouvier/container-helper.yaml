@@ -20,5 +20,5 @@ tcpchecks:
     host: www.ibm.com
     port: 80
   - name: LAN-webhost
-    host: 192.168.178
+    host: 192.168.178.240
     port: 80
