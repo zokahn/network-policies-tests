@@ -10,6 +10,3 @@ tcpchecks:
   - name: patty.bouvier
     host: patty-service.bouvier
     port: 8080
-  - name: external-ibm
-    host: www.ibm.com
-    port: 80
