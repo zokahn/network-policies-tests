@@ -4,7 +4,7 @@ cd deploy/simpson-and-bouvier
 oc delete project simpson
 sleep 5
 oc delete project bouvier
-sleep 10
+sleep 30
 
 oc new-project simpson
 oc apply -k homer.simpson
