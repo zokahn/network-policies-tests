@@ -10,3 +10,6 @@ tcpchecks:
   - name: selma.bouvier
     host: selma-service.bouvier
     port: 8080
+  - name: external-ibm
+    host: www.ibm.com
+    port: 80
