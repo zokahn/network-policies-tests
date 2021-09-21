@@ -1,0 +1,13 @@
+apiVersion: k8s.ovn.org/v1
+kind: EgressFirewall
+metadata:
+  name: default
+  namespace: simpson
+spec:
+  egress:
+  - to:
+      cidrSelector: 8.8.8.8/32
+    type: Allow
+  - deny:
+      cidrSelector: 8.8.4.4/32
+    type: Deny
