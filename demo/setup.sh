@@ -28,4 +28,4 @@ oc apply -k selma.bouvier
 echo "stuff built, ready to tmux results"
 read -n 1 k <&1
 cd ../..
-./run-tmux.sh apps.open
+./run-tmux.sh $1
