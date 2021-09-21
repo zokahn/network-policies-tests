@@ -107,7 +107,7 @@ EOF
 echo "Allowed traffic inside the simpsons, ready to allow bouvier traffic /n First set a label to bouvier"
 read -n 1 k <&1
 
-oc label namespace/bouvier name=bouvier
+oc label namespace/bouvier name-tst=bouvier
 
 echo "Allowed traffic inside the simpsons, ready to allow bouvier traffic, set the policy"
 read -n 1 k <&1
@@ -125,7 +125,7 @@ spec:
   - from:
     - namespaceSelector:
         matchLabels:
-          name: bouvier
+          name-tst: bouvier
 EOF
 
 cat << EOF
@@ -143,7 +143,7 @@ spec:
   - from:
     - namespaceSelector:
         matchLabels:
-          name: bouvier
+          name-tst: bouvier
 
 
 EOF
