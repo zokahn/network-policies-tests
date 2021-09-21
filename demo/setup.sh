@@ -1,6 +1,16 @@
 #!/bin/bash
 
-DEPLOY_DIR='/home/bart/network-policies-tests/deploy/simpson-and-bouvier'
+DEPLOY_DIR="~/network-policies-tests/deploy/simpson-and-bouvier"
+GUES_DOMAIN=$(oc whoami --show-console | awk -F  "." ' {print $2"."$3"."$4"."$5}')
+
+if [ "$1" == "" ] ; then
+  echo "Please run $0 <domain>"
+  echo "domain is where the ingress dns wildcard points to"
+  echo "Your domain is guessed as $GUES_DOMAIN"
+  exit 1;
+fi
+
+
 
 echo "Press enter to continue"
 read -n 1 k <&1
@@ -17,5 +27,5 @@ oc apply -k selma.bouvier
 
 echo "stuff built, ready to tmux results"
 read -n 1 k <&1
-cd ../.. 
-./run-tmux.sh apps.openshift-pilot.sandbox.nfv.local
+cd ../..
+./run-tmux.sh apps.open
