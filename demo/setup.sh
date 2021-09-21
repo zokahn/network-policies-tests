@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPLOY_DIR='~/git/network-policies-tests/deploy/simpson-and-bouvier'
+DEPLOY_DIR='/root/git/network-policies-tests/deploy/simpson-and-bouvier'
 GUES_DOMAIN=$(oc whoami --show-console | awk -F  "." ' {print $2"."$3"."$4"."$5}')
 
 if [ "$1" == "" ] ; then
