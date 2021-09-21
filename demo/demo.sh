@@ -120,7 +120,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      deployment: marge-deployment
+      app: marge
   ingress:
   - from:
     - namespaceSelector:
@@ -138,7 +138,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      deployment: marge-deployment
+      app: marge
   ingress:
   - from:
     - namespaceSelector:
