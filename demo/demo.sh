@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 echo "Press enter to continue"
 read -n 1 k <&1
@@ -19,7 +19,7 @@ metadata:
 spec:
   podSelector: {}
 
-  
+
 EOF
 
 oc create -n simpson  -f - <<EOF
@@ -120,7 +120,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      deployment: marge
+      deployment: marge-deployment
   ingress:
   - from:
     - namespaceSelector:
@@ -138,7 +138,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      deployment: marge
+      deployment: marge-deployment
   ingress:
   - from:
     - namespaceSelector:
@@ -147,5 +147,3 @@ spec:
 
 
 EOF
-
-
